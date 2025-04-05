@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            /* Azul pastel suave */
+            font-family: Arial, sans-serif;
+            color: #333;
+            /* Texto en gris oscuro */
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            border: 2px solid #4682B4;
+            /* Azul acero */
+            background-color: #ecf0f1;
+            /* Gris claro */
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #4682B4;
+        }
+
+        th {
+            background-color: #2c3e50;
+            /* Gris oscuro */
+            color: white;
+        }
+
+        tfoot input {
+            width: 95%;
+            padding: 5px;
+            background-color: #dcdde1;
+            /* Gris suave */
+            border: 1px solid #7f8c8d;
+            color: #333;
+        }
+
+        button {
+            width: 200px;
+            padding: 10px;
+            background-color: #3498db;
+            /* Azul moderno */
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            /* Azul más oscuro al pasar el mouse */
+        }
+
+        div {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center; font-size: 48px;">Diseño Web</h1>
+    <h2 style="text-align: center; font-size: 24px">¡Bienvenido a nuestra página!</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Edison Cavani</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Juan Román Riquelme</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input type="text" placeholder="ID"></td>
+                <td><input type="text" placeholder="Nombre"></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <div>
+        <button onclick="add()">ADD</button>
+    </div>
+
+    <script>
+        window.onload = () => {     //Objeto y atributo de la venta = Funcion anonima
+            document.getElementsByTagName('input')[0].focus() //Elementos por nombre de la etiqueta (segun input)
+        }
+        
+        function add() {
+            var tbody = document.getElementsByTagName('tbody')[0] //Variable donde tomo la tabla html
+            var row = tbody.insertRow() //Funcion para agregar una fila en la tabla
+            
+            var cell = row.insertCell() //Funcion para agregar una celda en la fila
+            cell.innerHTML = document.getElementsByTagName('input')[0].value
+            
+            var cell = row.insertCell()
+            cell.innerHTML = document.getElementsByTagName('input')[1].value
+
+            clear() 
+        }
+
+        function clear() {
+            document.getElementsByTagName('input')[0].value = ''
+            document.getElementsByTagName('input')[1].value = ''
+            document.getElementsByTagName('input')[0].focus()
+        }
+    </script>
+
+</body>
+
+</html>
