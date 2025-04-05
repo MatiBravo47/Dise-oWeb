@@ -4,22 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño Web</title>
+    <title>F1 Drivers 2025</title>
     <style>
         body {
-            background-color: #f0f8ff;
-            /* Azul pastel suave */
-            font-family: Arial, sans-serif;
-            color: #333;
-            /* Texto en gris oscuro */
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: 'Helvetica Neue', sans-serif;
         }
 
         table {
             margin: auto;
             border-collapse: collapse;
-            border: 2px solid #4682B4;
             /* Azul acero */
-            background-color: #ecf0f1;
+            background-color: #1e1e1e;
             /* Gris claro */
         }
 
@@ -27,11 +24,10 @@
         td {
             text-align: center;
             padding: 10px;
-            border: 1px solid #4682B4;
         }
 
         th {
-            background-color: #2c3e50;
+            background-color: #e10600;
             /* Gris oscuro */
             color: white;
         }
@@ -40,7 +36,6 @@
             width: 95%;
             padding: 5px;
             background-color: #dcdde1;
-            /* Gris suave */
             border: 1px solid #7f8c8d;
             color: #333;
         }
@@ -48,8 +43,7 @@
         button {
             width: 200px;
             padding: 10px;
-            background-color: #3498db;
-            /* Azul moderno */
+            background-color: #e10600;
             color: white;
             border: none;
             font-size: 16px;
@@ -59,8 +53,7 @@
         }
 
         button:hover {
-            background-color: #2980b9;
-            /* Azul más oscuro al pasar el mouse */
+            background-color: #b00000;
         }
 
         div {
@@ -72,36 +65,39 @@
 
 <body>
 
-    <h1 style="text-align: center; font-size: 48px;">Diseño Web</h1>
-    <h2 style="text-align: center; font-size: 24px">¡Bienvenido a nuestra página!</h2>
+    <h1 style="text-align: center; font-size: 48px;">F1 drivers 2025</h1>
 
     <table>
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Team</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
-                <td>Edison Cavani</td>
+                <td>#1</td>
+                <td>Max Verstappen</td>
+                <td>Red Bull</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>Juan Román Riquelme</td>
+                <td>#16</td>
+                <td>Charles Leclerc</td>
+                <td>Ferrari</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td><input type="text" placeholder="ID"></td>
-                <td><input type="text" placeholder="Nombre"></td>
+                <td><input type="text" placeholder="Number"></td>
+                <td><input type="text" placeholder="Name"></td>
+                <td><input type="text" placeholder="Team"></td>
             </tr>
         </tfoot>
     </table>
     
     <div>
-        <button onclick="add()">ADD</button>
+        <button onclick="add()">Add</button>
     </div>
 
     <script>
@@ -119,12 +115,17 @@
             var cell = row.insertCell()
             cell.innerHTML = document.getElementsByTagName('input')[1].value
 
+            var cell = row.insertCell()
+            cell.innerHTML = document.getElementsByTagName('input')[2].value
+
             clear() 
         }
 
         function clear() {
             document.getElementsByTagName('input')[0].value = ''
             document.getElementsByTagName('input')[1].value = ''
+            document.getElementsByTagName('input')[2].value = ''
+            
             document.getElementsByTagName('input')[0].focus()
         }
     </script>
