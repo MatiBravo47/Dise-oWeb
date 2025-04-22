@@ -9,54 +9,64 @@
 </head>
 
 <body>
+    <header>
+        <h1>Trabajos practicos diseño web</h1>
+    </header>
     <nav>
         <a href="Tp1.html">
-            <button>TP1</button></a>
+            <button>TP1</button>
+        </a>
         <a href="#">
             <button>Tabla F1</button>
         </a>
+        <a href="diseñohtml.html">
+            <button>Diseño</button>
+        </a>
     </nav>
+    <main>
+        <h1 style="text-align: center; font-size: 48px;">F1 drivers 2025</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Team</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="row0">
+                    <td id ="cell0">#1</td>
+                    <td id ="cell1">Max Verstappen</td>
+                    <td id ="cell2">Red Bull</td>
+                    <td id ="cell3">
+                        <button onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
+                    </td>
+                </tr>
+                <tr id="row1">
+                    <td id ="cell0">#16</td>
+                    <td id ="cell1">Charles Leclerc</td>
+                    <td id ="cell2">Ferrari</td>
+                    <td id ="cell3">
+                        <button onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="text" placeholder="Number"></td>
+                    <td><input type="text" placeholder="Name"></td>
+                    <td><input type="text" placeholder="Team"></td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <div class="button">
+            <button onclick="addRow()">Add</button>
+        </div>
 
-    <h1 style="text-align: center; font-size: 48px;">F1 drivers 2025</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Number</th>
-                <th>Name</th>
-                <th>Team</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr id="row0">
-                <td id ="cell0">#1</td>
-                <td id ="cell1">Max Verstappen</td>
-                <td id ="cell2">Red Bull</td>
-                <td id ="cell3">
-                    <button onclick="deleteRow(this.parentElement.parentElement.getAtribute('id'))">X</button>
-                </td>
-            </tr>
-            <tr id="row1">
-                <td id ="cell0">#16</td>
-                <td id ="cell1">Charles Leclerc</td>
-                <td id ="cell2">Ferrari</td>
-                <td id ="cell3">
-                    <button onclick="deleteRow(this.parentElement.parentElement.getAtribute('id'))">X</button>
-                </td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td><input type="text" placeholder="Number"></td>
-                <td><input type="text" placeholder="Name"></td>
-                <td><input type="text" placeholder="Team"></td>
-            </tr>
-        </tfoot>
-    </table>
-    
-    <div>
-        <button onclick="addRow()">Add</button>
-    </div>
+    </main>
+
     <script src="js/script.js"></script>
 </body>
 

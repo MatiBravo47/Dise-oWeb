@@ -1,13 +1,37 @@
-body {
-    background-color: #121212;
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+header {
+    background-color:#FFFFFF ;
+    text-align: center;
+    padding: 30px;
+}
+header h1 {
+    color: black;
+}
+nav {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #e10600;
+    padding: 20px;
+}
+section h1 {
+    text-align: center;
+}
+main {
+    padding: 15px;
+}
 table {
     margin: auto;
     border-collapse: collapse;
-    background-color: #1e1e1e;
 }
 
 a {
@@ -19,17 +43,17 @@ a {
 nav button {
     width: 100px;
     padding: 10px;
-    background-color:white ;
-    color: #e10600;
+    background-color:#e10600 ;
+    color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Helvetica Neue', sans-serif;
 
 }
 
-th,
-td {
+th, td {
     text-align: center;
     padding: 10px;
 }
@@ -59,8 +83,55 @@ button {
     transition: background 0.3s;
 }
 
+p{
+    color: #1e1e1e;
+}
 
 div {
     text-align: center;
     margin-top: 15px;
+}
+
+#deleteButton{
+    width: 60px;
+}
+
+.column1, .column2{
+    flex: 1;
+    min-width: 300px;
+}
+#tp1{
+    display: flex; /* Activa Flexbox para organizar los hijos en fila */
+    gap: 20px; /* Espaciado entre las columnas */
+    justify-content: space-between;
+}
+
+.column3, column4{
+    flex: 1; /* Ambas columnas ocupan el mismo espacio */
+    min-width: 300px; /* Asegura que las columnas no sean demasiado pequeñas */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Opcional: agrega un borde para visualización */
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el ancho */
+}
+
+section article {
+    margin-bottom: 20px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+article img{
+    max-width: 100%;
+    height: auto;
+}
+
+article h5 {
+    color: #e10600;
+    text-align: left;
+}
+
+article p{
+    text-align: left;
 }

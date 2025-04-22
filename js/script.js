@@ -15,19 +15,25 @@ function addRow() {
         var cell = row.insertCell()
         cell.setAttribute("id", "cell" + i)
         cell.innerHTML = inputs[i].value || "N/A";
-}
-// Crear la celda para el botón de eliminar
-var cell = row.insertCell(); // Cuarta celda (índice 3)
-cell.setAttribute("id", "cell3");
-//En la tercera celda (i === 3), insertar un botón "X"
-var button = document.createElement("button")
-button.innerHTML = "X"
-button.addEventListener("click", function () {
+    }
+    // Crear la celda para el botón de eliminar
+    var cell = row.insertCell(); // Cuarta celda (índice 3)
+    cell.setAttribute("id", "cell3");
+    //En la tercera celda (i === 3), insertar un botón "X"
+    var button = document.createElement("button")
+    button.innerHTML = "X"
+    button.addEventListener("click", function () {
         deleteRow(row.getAttribute("id"))
 })
 cell.append(button)
 clear();
 }
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        addRow(); // Llama a la función addRow() al presionar Enter
+    }
+});
 
 function clear() {
     document.getElementsByTagName('input')[0].value = ''

@@ -7,31 +7,55 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <h1>Trabajos practicos diseño web</h1>
+    </header>
     <nav>
         <a href="#">
-            <button>TP1</button></a>
+            <button>TP1</button>
+        </a>
         <a href="index.html">
             <button>Tabla F1</button>
         </a>
+        <a href="diseñohtml.html">
+            <button>Diseño</button>
+        </a>
     </nav>
-    
-    <button onclick="addTextById()">Add by ID</button>
-    <p id="myP"></p>
-    <button onclick="addTextByClass()">Add by Class</button>
-    <p class="test"></p>
-    <p class="test"></p>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Header1</th>
-                <th>Header2</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <button onclick="addRow()">add row</button>
-    <button onclick="deleteRow()">delete row</button>
-    <script src="js/Tp1script.js"></script>
+    <main id="tp1">
+        <div class="column3">
+            <button onclick="addTextById()">Add by ID</button>
+            <span id="myP"></span>
+            <p></p>
+            <button onclick="addTextByClass()">Add by Class</button>
+            <span class="test"></span>
+            <span class="test"></span> 
+        </div>
+
+        <div class="column4">
+            <table>
+                <thead>
+                    <tr id="1">
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="2">
+                        <td>cell1</td>
+                        <td>cell2</td>
+                        <td>
+                            <button id="deleteButton" onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="addRow()">add row</button>
+            
+        </div>      
+        
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/Tp1script.js"></script>  
 </body>
 </html>

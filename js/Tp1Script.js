@@ -13,7 +13,11 @@ function addTextByClass(){
 function addRow(){
     var tbody = document.getElementsByTagName("tbody")[0]
     var row = tbody.insertRow()
-    row.innerHTML = "New Row"
+    for (var i = 0; i < 2; i++) {
+        index = i + 1
+        var cell = row.insertCell()
+        cell.innerHTML = "cell"  + index
+    }
     var rowIndex = tbody.rows.length - 1;
         row.setAttribute("id", "row" + rowIndex);
 }
