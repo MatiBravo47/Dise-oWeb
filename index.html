@@ -5,62 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 Drivers 2025</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #FFFFFF;
-            font-family: 'Helvetica Neue', sans-serif;
-        }
-
-        table {
-            margin: auto;
-            border-collapse: collapse;
-            background-color: #1e1e1e;
-        }
-
-        th,
-        td {
-            text-align: center;
-            padding: 10px;
-        }
-
-        th {
-            background-color: #e10600;
-            color: white;
-        }
-
-        tfoot input {
-            width: 95%;
-            padding: 5px;
-            background-color: #dcdde1;
-            border: 1px solid #7f8c8d;
-            color: #333;
-        }
-
-        button {
-            width: 200px;
-            padding: 10px;
-            background-color: #e10600;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background-color: #b00000;
-        }
-
-        div {
-            text-align: center;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <nav>
+        <a href="Tp1.html">
+            <button>TP1</button></a>
+        <a href="#">
+            <button>Tabla F1</button>
+        </a>
+    </nav>
+
     <h1 style="text-align: center; font-size: 48px;">F1 drivers 2025</h1>
     <table>
         <thead>
@@ -101,53 +57,7 @@
     <div>
         <button onclick="addRow()">Add</button>
     </div>
-
-    <script>
-        window.onload = () => {     //Objeto y atributo de la venta = Funcion anonima
-            document.getElementsByTagName('input')[0].focus() //Elementos por nombre de la etiqueta (segun input)
-        }
-        
-        function addRow() {
-            var tbody = document.getElementsByTagName("tbody")[0]
-            // Obtener todos los inputs que están en el <tfoot>
-            var inputs = document.getElementsByTagName("tfoot")[0].getElementsByTagName("input");
-            var row = tbody.insertRow() //Insertar una nueva fila al final del <tbody>
-            var rowIndex = tbody.rows.length - 1;
-            row.setAttribute("id", "row" + rowIndex);
-            //Recorrer el número de celdas de la primera fila (<tr>) de la tabla
-            for (var i = 0; i < 3; i++) {
-                //Crear cada celda dentro de la nueva fila
-                var cell = row.insertCell()
-                cell.setAttribute("id", "cell" + i)
-                cell.innerHTML = inputs[i].value || "N/A";
-        }
-        // Crear la celda para el botón de eliminar
-        var cell = row.insertCell(); // Cuarta celda (índice 3)
-        cell.setAttribute("id", "cell3");
-        //En la tercera celda (i === 3), insertar un botón "X"
-        var button = document.createElement("button")
-        button.innerHTML = "X"
-        button.addEventListener("click", function () {
-                deleteRow(row.getAttribute("id"))
-        })
-        cell.append(button)
-        clear();
-        }
-
-        function clear() {
-            document.getElementsByTagName('input')[0].value = ''
-            document.getElementsByTagName('input')[1].value = ''
-            document.getElementsByTagName('input')[2].value = ''
-            
-            document.getElementsByTagName('input')[0].focus()
-        }
-
-        function deleteRow(rowId)
-        {
-            document.getElementById(rowId).remove()
-        }
-    </script>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
