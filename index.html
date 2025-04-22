@@ -108,18 +108,18 @@
         }
         
         function addRow() {
-        var tbody = document.getElementsByTagName("tbody")[0]
-        // Obtener todos los inputs que están en el <tfoot>
-        var inputs = document.getElementsByTagName("tfoot")[0].getElementsByTagName("input");
-        var row = tbody.insertRow() //Insertar una nueva fila al final del <tbody>
-        var rowIndex = tbody.rows.length - 1;
-        row.setAttribute("id", "row" + rowIndex);
-        //Recorrer el número de celdas de la primera fila (<tr>) de la tabla
-        for (var i = 0; i < 3; i++) {
-            //Crear cada celda dentro de la nueva fila
-            var cell = row.insertCell()
-            cell.setAttribute("id", "cell" + i)
-            cell.innerHTML = inputs[i].value || "N/A";
+            var tbody = document.getElementsByTagName("tbody")[0]
+            // Obtener todos los inputs que están en el <tfoot>
+            var inputs = document.getElementsByTagName("tfoot")[0].getElementsByTagName("input");
+            var row = tbody.insertRow() //Insertar una nueva fila al final del <tbody>
+            var rowIndex = tbody.rows.length - 1;
+            row.setAttribute("id", "row" + rowIndex);
+            //Recorrer el número de celdas de la primera fila (<tr>) de la tabla
+            for (var i = 0; i < 3; i++) {
+                //Crear cada celda dentro de la nueva fila
+                var cell = row.insertCell()
+                cell.setAttribute("id", "cell" + i)
+                cell.innerHTML = inputs[i].value || "N/A";
         }
         // Crear la celda para el botón de eliminar
         var cell = row.insertCell(); // Cuarta celda (índice 3)
