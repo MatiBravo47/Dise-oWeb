@@ -12,26 +12,30 @@
     </header>
     <nav>
         <a href="#">
-            <button>TP1</button>
+            <button class="btn">TP1</button>
         </a>
         <a href="index.html">
-            <button>Tabla F1</button>
+            <button class="btn">Tabla F1</button>
         </a>
-        <a href="diseñohtml.html">
-            <button>Diseño</button>
+        <a href="layout-design.html">
+            <button class="btn">Diseño</button>
         </a>
     </nav>
+    <h2 id="h2-tittle">Manipulacion del DOM</h2>
     <main id="tp1">
-        <div class="column3">
-            <button onclick="addTextById()">Add by ID</button>
+        
+        <div class="column3 center">
+            <h4>1. Insertar el string "Hello World" dentro del elemento p por ID </h4>
+            <button class="btn" onclick="addTextById()">Add by ID</button>
             <span id="myP"></span>
             <p></p>
-            <button onclick="addTextByClass()">Add by Class</button>
+            <h4>2. Insertar el string "Hello World" dentro del elemento p por clases </h4>
+            <button class="btn" onclick="addTextByClass()">Add by Class</button>
             <span class="test"></span>
             <span class="test"></span> 
         </div>
 
-        <div class="column4">
+        <div class="column4 center">
             <table>
                 <thead>
                     <tr id="1">
@@ -45,12 +49,12 @@
                         <td>cell1</td>
                         <td>cell2</td>
                         <td>
-                            <button id="deleteButton" onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
+                            <button class="btn" id="deleteButton" onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <button onclick="addRow()">add row</button>
+            <button class="btn" onclick="addRow()">add row</button>
             
         </div>      
         

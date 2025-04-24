@@ -17,6 +17,7 @@ main {
     display:flex;
     flex-wrap: wrap;
 }
+
 section{
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +26,8 @@ section{
 }
 
 footer{
+    display: block;
+    width: 100%;
     background-color: #15151E;
     clear: both; 
     text-align: center;

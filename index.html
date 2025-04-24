@@ -7,20 +7,19 @@
     <title>F1 Drivers 2025</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header>
         <h1>Trabajos practicos diseño web</h1>
     </header>
     <nav>
-        <a href="Tp1.html">
-            <button>TP1</button>
+        <a href="dom-manipulation.html">
+            <button class="btn">TP1</button>
         </a>
         <a href="#">
-            <button>Tabla F1</button>
+            <button class="btn">Tabla F1</button>
         </a>
-        <a href="diseñohtml.html">
-            <button>Diseño</button>
+        <a href="layout-design.html">
+            <button class="btn">Diseño</button>
         </a>
     </nav>
     <main>
@@ -40,7 +39,7 @@
                     <td id ="cell1">Max Verstappen</td>
                     <td id ="cell2">Red Bull</td>
                     <td id ="cell3">
-                        <button onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
+                        <button class="btn btn-small" onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
                     </td>
                 </tr>
                 <tr id="row1">
@@ -48,7 +47,7 @@
                     <td id ="cell1">Charles Leclerc</td>
                     <td id ="cell2">Ferrari</td>
                     <td id ="cell3">
-                        <button onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
+                        <button class="btn btn-small" onclick="deleteRow(this.parentElement.parentElement.getAttribute('id'))">X</button>
                     </td>
                 </tr>
             </tbody>
@@ -61,13 +60,11 @@
             </tfoot>
         </table>
         
-        <div class="button">
-            <button onclick="addRow()">Add</button>
+        <div class="button center">
+            <button class="btn" onclick="addRow()">Add</button>
         </div>
 
     </main>
-
     <script src="js/script.js"></script>
 </body>
-
 </html>
